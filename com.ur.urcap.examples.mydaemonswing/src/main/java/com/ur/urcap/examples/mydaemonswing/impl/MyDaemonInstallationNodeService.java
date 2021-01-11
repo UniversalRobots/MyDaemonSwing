@@ -20,7 +20,7 @@ public class MyDaemonInstallationNodeService implements SwingInstallationNodeSer
 
 	@Override
 	public String getTitle(Locale locale) {
-		return "My Daemon Swing";
+		return "My Daemon";
 	}
 
 	@Override

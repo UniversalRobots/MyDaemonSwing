@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 
-import time
 import sys
 
-import xmlrpclib
 from SimpleXMLRPCServer import SimpleXMLRPCServer
+from SocketServer import ThreadingMixIn
 
 title = ""
 
@@ -30,9 +29,12 @@ def get_message(name):
 sys.stdout.write("MyDaemon daemon started")
 sys.stderr.write("MyDaemon daemon started")
 
-server = SimpleXMLRPCServer(("127.0.0.1", 40405))
+class MultithreadedSimpleXMLRPCServer(ThreadingMixIn, SimpleXMLRPCServer):
+	pass
+
+server = MultithreadedSimpleXMLRPCServer(("127.0.0.1", 40405))
+server.RequestHandlerClass.protocol_version = "HTTP/1.1"
 server.register_function(set_title, "set_title")
 server.register_function(get_title, "get_title")
 server.register_function(get_message, "get_message")
 server.serve_forever()
-

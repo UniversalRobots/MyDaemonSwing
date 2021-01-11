@@ -31,7 +31,8 @@ void* AbyssServer::run(void* aserver) {
   xmlrpc_c::serverAbyss server(
       xmlrpc_c::serverAbyss::constrOpt().
       portNumber(SERVER_PORT).
-      registryP(&(ptr->serviceRegistry))
+      registryP(&(ptr->serviceRegistry)).
+      keepaliveMaxConn(UINT_MAX)
     );
 
   server.run();

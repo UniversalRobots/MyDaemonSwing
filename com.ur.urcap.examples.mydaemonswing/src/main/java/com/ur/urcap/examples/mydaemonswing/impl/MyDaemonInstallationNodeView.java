@@ -49,7 +49,7 @@ public class MyDaemonInstallationNodeView implements SwingInstallationNodeView<M
 		StyleConstants.setLineSpacing(attributeSet, 0.5f);
 		StyleConstants.setLeftIndent(attributeSet, 0f);
 		pane.setParagraphAttributes(attributeSet, false);
-		pane.setText("The popup title below is shared between all My Daemon Swing program nodes.\nThe title cannot be empty.");
+		pane.setText("The popup title below is shared between all My Daemon program nodes.\nThe title cannot be empty.");
 		pane.setEditable(false);
 		pane.setMaximumSize(pane.getPreferredSize());
 		pane.setBackground(infoBox.getBackground());

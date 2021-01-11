@@ -56,7 +56,7 @@ public class MyDaemonProgramNodeContribution implements ProgramNodeContribution 
 
 	@Override
 	public String getTitle() {
-		return "My Daemon Swing: " + getName();
+		return "My Daemon: " + getName();
 	}
 
 	@Override

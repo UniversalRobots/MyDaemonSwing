@@ -22,7 +22,7 @@ public class MyDaemonProgramNodeService implements SwingProgramNodeService<MyDae
 
 	@Override
 	public String getTitle(Locale locale) {
-		return "My Daemon Swing";
+		return "My Daemon";
 	}
 
 	@Override

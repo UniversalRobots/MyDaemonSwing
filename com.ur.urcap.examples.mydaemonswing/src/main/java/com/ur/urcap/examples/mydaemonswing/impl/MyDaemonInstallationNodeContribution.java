@@ -20,7 +20,7 @@ public class MyDaemonInstallationNodeContribution implements InstallationNodeCon
 
 	private static final String XMLRPC_VARIABLE = "my_daemon_swing";
 	private static final String ENABLED_KEY = "enabled";
-	private static final String DEFAULT_VALUE = "Hello My Daemon Swing";
+	private static final String DEFAULT_VALUE = "Hello My Daemon";
 	public static final int PORT = 40405;
 
 	private DataModel model;
@@ -96,13 +96,13 @@ public class MyDaemonInstallationNodeContribution implements InstallationNodeCon
 		String text = "";
 		switch (state) {
 		case RUNNING:
-			text = "My Daemon Swing runs";
+			text = "My Daemon runs";
 			break;
 		case STOPPED:
-			text = "My Daemon Swing stopped";
+			text = "My Daemon stopped";
 			break;
 		case ERROR:
-			text = "My Daemon Swing failed";
+			text = "My Daemon failed";
 			break;
 		}
 
