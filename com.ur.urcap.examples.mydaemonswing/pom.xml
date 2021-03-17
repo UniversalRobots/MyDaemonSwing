@@ -24,6 +24,8 @@
 		<urcap.copyright>Copyright (C) 2009-${copyright.year} Universal Robots. All Rights Reserved</urcap.copyright>
 		<urcap.description>MyDaemon Swing example URCap</urcap.description>
 		<urcap.licenseType>Sample license</urcap.licenseType>
+		<urcap.compatibility.CB3>true</urcap.compatibility.CB3>
+		<urcap.compatibility.eSeries>true</urcap.compatibility.eSeries>
 		<!--********************** END OF URCAP META DATA **********************-->
 		<!--********************************************************************-->
 
@@ -107,6 +109,8 @@
 						<Bundle-Copyright>${urcap.copyright}</Bundle-Copyright>
 						<Bundle-LicenseType>${urcap.licenseType}</Bundle-LicenseType>
 						<Bundle-Description>${urcap.description}</Bundle-Description>
+						<URCapCompatibility-CB3>${urcap.compatibility.CB3}</URCapCompatibility-CB3>
+						<URCapCompatibility-eSeries>${urcap.compatibility.eSeries}</URCapCompatibility-eSeries>
 						<!--***************************************************************-->
 						<Import-Package>
 							com.ur.urcap.api*,
