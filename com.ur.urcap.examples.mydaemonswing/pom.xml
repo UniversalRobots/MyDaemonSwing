@@ -267,18 +267,6 @@
 						<version>1.1</version>
 						<executions>
 							<execution>
-								<id>remote-remove-felix-cache</id>
-								<phase>install</phase>
-								<goals>
-									<goal>exec</goal>
-								</goals>
-								<configuration>
-									<executable>sshpass</executable>
-									<commandlineArgs>-p ${urcap.install.password} ssh ${urcap.install.username}@${urcap.install.host} rm -rfv /root/GUI/felix-cache/*</commandlineArgs>
-									<workingDirectory>.</workingDirectory>
-								</configuration>
-							</execution>
-							<execution>
 								<id>remote-install-urcap</id>
 								<phase>install</phase>
 								<goals>
@@ -343,18 +331,6 @@
 						<version>1.1</version>
 						<executions>
 							<execution>
-								<id>ursim-remove-felix-cache</id>
-								<phase>install</phase>
-								<goals>
-									<goal>exec</goal>
-								</goals>
-								<configuration>
-									<executable>rm</executable>
-									<commandlineArgs>-rfv ${ursim.home}/GUI/felix-cache/*</commandlineArgs>
-									<workingDirectory>.</workingDirectory>
-								</configuration>
-							</execution>
-							<execution>
 								<id>ursim-install-urcap</id>
 								<phase>install</phase>
 								<goals>
@@ -380,18 +356,6 @@
 						<artifactId>exec-maven-plugin</artifactId>
 						<version>1.1</version>
 						<executions>
-						<execution>
-							<id>ursimvm-remove-felix-cache</id>
-							<phase>install</phase>
-							<goals>
-								<goal>exec</goal>
-							</goals>
-							<configuration>
-								<executable>sshpass</executable>
-								<commandlineArgs>-p ${ursimvm.install.password} ssh ${ursimvm.install.username}@${ursimvm.install.host} rm -rfv /root/GUI/felix-cache/*</commandlineArgs>
-								<workingDirectory>.</workingDirectory>
-							</configuration>
-						</execution>
 							<execution>
 								<id>ursimvm-install-urcap</id>
 								<phase>install</phase>
